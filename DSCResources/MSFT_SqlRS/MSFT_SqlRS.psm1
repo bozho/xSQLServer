@@ -681,6 +681,8 @@ function Set-TargetResource
 
                 Invoke-RsCimMethod @invokeRsCimMethodParameters
             }
+
+            Restart-ReportingServicesService -SQLInstanceName $InstanceName -WaitTime 30
         }
     }
 
